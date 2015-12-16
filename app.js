@@ -39,7 +39,7 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
     
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?APPID=870ef7632ae5ad54fcb081a124d1318d', {callback: "JSON_CALLBACK"}, { get: { method: "JSONP" }});
     
-    $scope.days = $routeParams.days || 2;
+    $scope.days = $routeParams.days || '2';
     $scope.weatherResult = $scope.weatherAPI.get({q: $scope.city, cnt: $scope.days});
     
     $scope.convertToCelcious = function (degK) {
