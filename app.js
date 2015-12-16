@@ -3,22 +3,20 @@ var weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
 weatherApp.config(function ($routeProvider) {
     
     $routeProvider
-    
     .when('/', {
         templateUrl: 'pages/main.htm',
         controller: 'mainController'
     })
-    
     .when('/forecast', {
         templateUrl: 'pages/forecast.htm',
         controller: 'forecastController'
     })
-    
     .when('/forecast/:days', {
         templateUrl: 'pages/forecast.htm',
         controller: 'forecastController'
     })
 });
+
 
 weatherApp.service('cityService', function () {
     this.city = 'New York, NY';
