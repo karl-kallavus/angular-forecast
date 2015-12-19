@@ -50,3 +50,11 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
         return new Date(date * 1000);
     }
 }]);
+
+weatherApp.directive('weatherReport', function(){
+    return {
+        restrict: 'E',
+        replace: true,
+        templateUrl: 'directives/weatherReport.html'
+    }
+});
